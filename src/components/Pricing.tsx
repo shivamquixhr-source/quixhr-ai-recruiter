@@ -1,11 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import { useState } from "react";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
 
 const plans = [
   {
     name: "Free",
-    price: "₹0",
+    priceMonthly: "₹0",
+    priceYearly: "₹0",
     period: "/month",
     description: "Perfect for trying out QuixHR",
     features: [
@@ -21,7 +25,8 @@ const plans = [
   },
   {
     name: "Starter",
-    price: "₹2,499",
+    priceMonthly: "₹2,499",
+    priceYearly: "₹1,999",
     period: "/month",
     description: "For growing teams",
     features: [
@@ -38,7 +43,8 @@ const plans = [
   },
   {
     name: "Growth",
-    price: "₹7,999",
+    priceMonthly: "₹7,999",
+    priceYearly: "₹6,399",
     period: "/month",
     description: "Most popular choice",
     features: [
@@ -55,7 +61,8 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: "Custom",
+    priceMonthly: "Custom",
+    priceYearly: "Custom",
     period: "",
     description: "For large organizations",
     features: [
@@ -73,27 +80,49 @@ const plans = [
 ];
 
 const Pricing = () => {
+  const [isYearly, setIsYearly] = useState(false);
+
   return (
     <section id="pricing" className="py-20 px-4">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center space-y-4 mb-16">
+        <div className="text-center space-y-6 mb-12">
           <h2>Simple, transparent pricing</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Choose the plan that fits your hiring needs
           </p>
+          
+          {/* Pricing Toggle */}
+          <div className="flex items-center justify-center gap-3 pt-4">
+            <Label htmlFor="pricing-toggle" className={!isYearly ? "font-semibold" : "text-muted-foreground"}>
+              Monthly
+            </Label>
+            <Switch
+              id="pricing-toggle"
+              checked={isYearly}
+              onCheckedChange={setIsYearly}
+            />
+            <Label htmlFor="pricing-toggle" className={isYearly ? "font-semibold" : "text-muted-foreground"}>
+              Yearly
+            </Label>
+            {isYearly && (
+              <span className="ml-2 text-sm font-medium px-2 py-1 rounded-full bg-green-500/10 text-green-600 border border-green-500/20">
+                Save 20%
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className={`relative border-border hover:shadow-lg transition-shadow ${
-                plan.popular ? "border-2 border-primary shadow-premium" : ""
+              className={`relative border-border hover:shadow-lg transition-all ${
+                plan.popular ? "border-2 border-primary shadow-premium scale-105" : ""
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-primary text-primary-foreground text-xs font-medium px-3 py-1 rounded-full">
+                  <span className="bg-primary text-primary-foreground text-xs font-medium px-3 py-1 rounded-full shadow-lg">
                     Most Popular
                   </span>
                 </div>
@@ -103,8 +132,15 @@ const Pricing = () => {
                 <CardTitle className="text-lg">{plan.name}</CardTitle>
                 <CardDescription>{plan.description}</CardDescription>
                 <div className="pt-4">
-                  <span className="text-4xl font-bold">{plan.price}</span>
+                  <span className="text-4xl font-bold">
+                    {isYearly ? plan.priceYearly : plan.priceMonthly}
+                  </span>
                   <span className="text-muted-foreground">{plan.period}</span>
+                  {isYearly && plan.priceYearly !== "Custom" && plan.priceYearly !== "₹0" && (
+                    <div className="text-xs text-muted-foreground mt-1">
+                      Billed yearly
+                    </div>
+                  )}
                 </div>
               </CardHeader>
 
