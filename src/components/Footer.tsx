@@ -2,10 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
   const [email, setEmail] = useState("");
   const [isSubscribing, setIsSubscribing] = useState(false);
+  const isHomePage = location.pathname === "/";
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -79,8 +82,20 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="font-semibold text-sm">Product</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
-                <li><a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a></li>
+                <li>
+                  {isHomePage ? (
+                    <a href="#features" className="hover:text-foreground transition-colors">Features</a>
+                  ) : (
+                    <Link to="/#features" className="hover:text-foreground transition-colors">Features</Link>
+                  )}
+                </li>
+                <li>
+                  {isHomePage ? (
+                    <a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a>
+                  ) : (
+                    <Link to="/#pricing" className="hover:text-foreground transition-colors">Pricing</Link>
+                  )}
+                </li>
                 <li><a href="#" className="hover:text-foreground transition-colors">Integrations</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors">API</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors">Changelog</a></li>
@@ -90,10 +105,10 @@ const Footer = () => {
             <div className="space-y-4">
               <h4 className="font-semibold text-sm">Company</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors">About</a></li>
+                <li><Link to="/about" className="hover:text-foreground transition-colors">About</Link></li>
                 <li><a href="#" className="hover:text-foreground transition-colors">Blog</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
+                <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
                 <li><a href="#" className="hover:text-foreground transition-colors">Press Kit</a></li>
               </ul>
             </div>
