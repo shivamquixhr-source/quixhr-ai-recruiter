@@ -6,8 +6,6 @@ import ProductShowcase from "@/components/ProductShowcase";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import PricingFAQ from "@/components/PricingFAQ";
-import LeadMagnet from "@/components/LeadMagnet";
-import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
 
@@ -23,8 +21,6 @@ const Index = () => {
       <Testimonials />
       <Pricing />
       <PricingFAQ />
-      <LeadMagnet />
-      <CTA />
       <Footer />
     </div>
   );
