@@ -36,14 +36,14 @@ const PricingFAQ = () => {
   return (
     <section className="py-16 px-4">
       <div className="container mx-auto max-w-3xl">
-        <div className="text-center space-y-4 mb-12">
-          <h3>Frequently asked questions</h3>
-          <p className="text-muted-foreground">
+        <div className="text-center space-y-3 mb-12">
+          <h2 className="text-3xl font-semibold">Frequently asked questions</h2>
+          <p className="text-lg text-muted-foreground">
             Everything you need to know about pricing and plans
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-3">
           {faqs.map((faq, index) => (
             <AccordionItem 
               key={index} 
@@ -51,10 +51,10 @@ const PricingFAQ = () => {
               className="border border-border rounded-lg px-6 animate-fade-in"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <AccordionTrigger className="text-left hover:no-underline">
+              <AccordionTrigger className="text-left text-base font-medium py-5 hover:no-underline">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
+              <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-5">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
