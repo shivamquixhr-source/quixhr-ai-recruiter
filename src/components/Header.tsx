@@ -91,7 +91,7 @@ const Header = () => {
         </nav>
 
         {/* Desktop CTAs */}
-        <div className="hidden md:flex items-center space-x-3">
+        <div className="hidden md:flex items-center space-x-3 ml-auto">
           <Button variant="ghost" size="sm">
             Sign In
           </Button>
