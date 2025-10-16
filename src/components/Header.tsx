@@ -27,14 +27,14 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="container mx-auto px-4 h-16 flex items-center relative">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <div className="font-bold text-xl hover:opacity-80 transition-opacity">QuixHR</div>
         </Link>
         
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        {/* Desktop Navigation - Centered */}
+        <nav className="hidden md:flex items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
           {isHomePage ? (
             <>
               <a 

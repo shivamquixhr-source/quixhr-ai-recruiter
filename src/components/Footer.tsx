@@ -97,8 +97,6 @@ const Footer = () => {
                   )}
                 </li>
                 <li><a href="#" className="hover:text-foreground transition-colors">Integrations</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">API</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Changelog</a></li>
               </ul>
             </div>
 
@@ -106,31 +104,23 @@ const Footer = () => {
               <h4 className="font-semibold text-sm">Company</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link to="/about" className="hover:text-foreground transition-colors">About</Link></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Careers</a></li>
+                <li><Link to="/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
+                <li><Link to="/careers" className="hover:text-foreground transition-colors">Careers</Link></li>
                 <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Press Kit</a></li>
               </ul>
             </div>
 
             <div className="space-y-4">
               <h4 className="font-semibold text-sm">Legal</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Security</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">GDPR</a></li>
+                <li><Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
           </div>
 
-          <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+          <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
             <div>© 2025 QuixHR. All rights reserved.</div>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-foreground transition-colors">Status</a>
-              <a href="#" className="hover:text-foreground transition-colors">Help Center</a>
-              <a href="#" className="hover:text-foreground transition-colors">Sitemap</a>
-            </div>
           </div>
         </div>
       </div>
