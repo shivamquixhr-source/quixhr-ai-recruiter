@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
+import MarqueeBanner from "@/components/MarqueeBanner";
 import Features from "@/components/Features";
 import ProductShowcase from "@/components/ProductShowcase";
 import Testimonials from "@/components/Testimonials";
@@ -15,7 +15,7 @@ const Index = () => {
       <Analytics />
       <Header />
       <Hero />
-      <Stats />
+      <MarqueeBanner />
       <div id="features">
         <Features />
       </div>
