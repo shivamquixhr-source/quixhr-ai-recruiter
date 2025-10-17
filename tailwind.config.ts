@@ -132,7 +132,7 @@ export default {
         "slide-in": "slide-in 0.5s ease-out",
         "float": "float 3s ease-in-out infinite",
         "pulse-slow": "pulse-slow 2s ease-in-out infinite",
-        "marquee": "marquee 30s linear infinite",
+        "marquee": "marquee 45s linear infinite",
       },
     },
   },

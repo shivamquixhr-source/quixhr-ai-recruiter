@@ -19,7 +19,7 @@ const Hero = () => {
           </div>
           
           <h1 className="max-w-4xl mx-auto leading-tight">
-            From 500 resumes to the Top 5 Instantly
+            From 500 resumes to the <span className="text-muted-foreground">Top 5 Instantly</span>
           </h1>
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">

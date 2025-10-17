@@ -7,12 +7,12 @@ import {
 
 const faqs = [
   {
-    question: "Can I cancel anytime?",
-    answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees or long-term contracts."
+    question: "How does QuixHR manage applications from many job portals?",
+    answer: "QuixHR provides one smart link per job. All applications from LinkedIn, Naukri, or anywhere, flow into your single QuixHR dashboard."
   },
   {
-    question: "What happens when I exceed my application limit?",
-    answer: "You'll receive a notification when approaching your limit. You can upgrade to a higher plan or wait until next month's reset."
+    question: "What makes QuixHR's AI resume screening unique?",
+    answer: ""
   },
   {
     question: "Can I switch plans later?",
