@@ -4,17 +4,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const features = [
   {
     icon: Link,
-    title: "Centralized Applications",
+    title: "Hire the Best Instantly",
     description: "Post your jobs on LinkedIn, Naukri, Indeed with a single link. All applications flow into one unified dashboard, saving hours of manual tracking.",
   },
   {
     icon: Brain,
-    title: "AI-Powered Filtering",
+    title: "All Application one Dashboard",
     description: "Our AI analyzes CVs against your JD—not just keywords. Get candidates sorted into Green, Yellow, and Red with detailed reasoning for each decision.",
   },
   {
     icon: Kanban,
-    title: "Kanban Pipeline Tracking",
+    title: "Track & Manage Effortlessly",
     description: "Visualize your entire hiring process. Drag candidates through stages, collaborate with managers, and never lose track of a promising applicant.",
   },
 ];

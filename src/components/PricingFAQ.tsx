@@ -12,23 +12,19 @@ const faqs = [
   },
   {
     question: "What makes QuixHR's AI resume screening unique?",
-    answer: ""
+    answer: "Our AI analyzes resumes against your full Job Description, not just keywords. It gives clear 'Green,' 'Yellow,' 'Red' rankings with specific reasons."
   },
   {
-    question: "Can I switch plans later?",
-    answer: "Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately."
+    question: "How does QuixHR simplify the hiring pipeline for teams?",
+    answer: "Our Kanban-style pipeline lets HR drag-and-drop candidates. Managers get real-time visibility, eliminating constant updates and guesswork."
   },
   {
-    question: "Do you offer refunds?",
-    answer: "We offer a 14-day money-back guarantee on all paid plans. If you're not satisfied, we'll refund your payment in full."
+    question: "Can QuixHR help optimize our job posting strategy?",
+    answer: "Yes. Our analytics dashboard shows which job portals deliver the best candidates, helping you optimize spend and recruitment strategy."
   },
   {
-    question: "Is my data secure?",
-    answer: "Yes, we use bank-level encryption and are SOC2 compliant. Your candidate data is never shared with third parties."
-  },
-  {
-    question: "Can I try before buying?",
-    answer: "Yes! Start with our Free plan to explore QuixHR. Upgrade when you're ready for more features."
+    question: "Is QuixHR suitable for faster hiring in growing Indian teams?",
+    answer: "Absolutely. QuixHR automates screening and centralizes applications, empowering growing Indian teams to hire top talent faster and more efficiently."
   }
 ];
 
