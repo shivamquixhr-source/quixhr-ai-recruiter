@@ -5,17 +5,17 @@ const features = [
   {
     icon: Link,
     title: "Hire the Best Instantly",
-    description: "Post your jobs on LinkedIn, Naukri, Indeed with a single link. All applications flow into one unified dashboard, saving hours of manual tracking.",
+    description: "Our AI analyzes entire job descriptions not just keywords to rank candidates into Green, Yellow, and Red with clear reasons. Spend time only on top talent.",
   },
   {
     icon: Brain,
     title: "All Application one Dashboard",
-    description: "Our AI analyzes CVs against your JD—not just keywords. Get candidates sorted into Green, Yellow, and Red with detailed reasoning for each decision.",
+    description: "Stop juggling job portals. QuixHR gives you one link to collect every application from LinkedIn, Naukri, and Indeed organized in a single, powerful dashboard.",
   },
   {
     icon: Kanban,
     title: "Track & Manage Effortlessly",
-    description: "Visualize your entire hiring process. Drag candidates through stages, collaborate with managers, and never lose track of a promising applicant.",
+    description: "Visualize your hiring pipeline. Drag and drop candidates through custom stages and keep your team aligned no messy sheets, just total clarity.",
   },
 ];
 
